@@ -1,0 +1,101 @@
+@import menu_slider_fonts
+
+$meal_color: #333
+
+%meal_font
+    font-family: Banny
+    font-style: normal
+    font-weight: bold
+    font-size: 18px
+    line-height: 18px
+    color: $meal_color
+
+%sub_font
+    font-family: Open Sans
+    font-style: normal
+    font-weight: normal
+    font-size: 12px
+    line-height: 18px
+    color: $meal_color
+    opacity: 50%
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+ul
+    list-style: none
+
+h1
+    @extend %meal_font
+    text-align: center
+    text-transform: uppercase
+
+.container
+    max-width: 1200px
+    height: 100vh
+    margin: 0 auto
+    padding: 24px
+    display: flex
+    flex-direction: column
+
+.wapper
+    flex-grow: 1
+
+.bar
+    &_ul
+        display: flex
+        justify-content: space-around
+        align-items: center
+        &_li
+            width: 120px
+            height: 50px
+            display: flex
+            align-items: center
+            justify-content: center
+            @extend %sub_font
+            opacity: 1
+            text-transform: uppercase
+            cursor: pointer
+
+        &_li:not(:last-child)
+            border-right: 1px solid rgba(51,51, 51, 0.2)
+
+        &_li:hover
+            background-color: #e2e2e2
+
+.menu
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: #e3e3e3
+    padding: 24px
+
+    &_window
+        width: 250px
+        height: 250px
+        overflow: hidden
+        position: relative
+
+    &_tank
+        width: 1750px
+        display: flex
+        position: absolute
+        left: 0
+        transition: .5s
+
+        &_item
+            width: 250px
+            height: 250px
+            @extend %sub_font
+
+        &_item:nth-child(2n)
+            background-color: #b6fab9
+
+    &_tank:hover
+        left: -250px
+
+.food
+    @extend %sub_font
+    background-color: #d1d0d0
