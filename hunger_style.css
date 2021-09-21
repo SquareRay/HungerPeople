@@ -103,7 +103,9 @@
 
 .menu-screen-grid {
   width: 320px;
+  height: 450px;
   overflow: hidden;
+  position: relative;
 }
 
 @media (min-width: 736px) {
@@ -123,6 +125,10 @@
   display: -ms-flexbox;
   display: flex;
   width: 2240px;
+  position: absolute;
+  left: 0;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .menu-cel-grid {
