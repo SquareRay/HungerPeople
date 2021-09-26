@@ -1,0 +1,145 @@
+@import title-block
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+// div
+//     border: 1px solid #000
+
+// ---------- Общее выравнивание ------------
+
+.section
+    padding: 0 16px
+
+@media (min-width: 736px)
+    .section
+        padding: 0 calc(50% - 368px)
+
+@media (min-width: 1112px)
+    .section
+        padding: 0 calc(50% - 556px)
+
+@media (min-width: 1280px)
+    .section
+        padding: 0 calc(50% - 640px)
+
+// ---------- Общее выравнивание END ------------
+// ---------- Прижатие footer ----------
+.wapper
+    // height: 100vh
+    display: flex
+    flex-direction: column
+
+.content
+    flex-grow: 1
+// ---------- Прижатие footer END ----------
+.block-676
+
+    &__rigth
+        padding-top: 56px
+        padding-bottom: 64px
+    &__text
+        @extend %block-676_font
+        opacity: 90%
+        margin-top: 16px
+
+.block-676-rev
+    color: $head_color_dark
+
+@media (min-width: 720px)
+    .block-676
+        display: flex
+        flex-direction: column
+        align-items: center
+
+@media (min-width: 1224px)
+    .block-676
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        padding-bottom: 76px
+
+        &__left,
+        &__rigth
+            width: 600px
+
+    .block-676-rev
+        flex-direction: row-reverse
+
+
+@media (max-width: 720px)
+    .hide-block
+        display: none
+
+.header
+    height: 800px
+    // background-image: url(./img/header-bg.jpg)
+.about
+    padding-top: 100px
+
+@media (max-width: 720px)
+    .about
+        padding-top: 24px
+
+.chef
+    background-image: url(../img/chef-bg.jpg)
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+.book
+    padding-top: 100px
+
+@media (max-width: 720px)
+    .book
+        padding-top: 24px
+
+.spec
+    background-image: url(../img/spec-bg.jpg)
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+
+.menu
+    height: 920px
+
+.ev
+    background-image: url(../img/events-bg.jpg)
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+
+.photo
+    margin: 0 auto
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+
+    &__line
+        display: flex
+
+@media (max-width: 720px)
+    .photo_hide
+        display: none
+    .photo__img
+        width: 100%
+
+.contacts
+    height: 648px
+.map
+    height: 475px
+// ---------------- FOOTER -------------
+.footer
+    height: 100px
+    background-color: #000000
+    display: flex
+    justify-content: center
+    align-items: center
+    &__text
+        font-family: Open Sans
+        font-style: normal
+        font-weight: normal
+        font-size: 12px
+        line-height: 12px
+        color: #fff
