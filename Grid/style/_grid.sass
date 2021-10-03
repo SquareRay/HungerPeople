@@ -1,0 +1,208 @@
+@import title-block
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+// div
+//     border: 1px solid #000
+
+// ---------- Общее выравнивание ------------
+
+.section
+    padding: 0 16px
+
+@media (min-width: 720px)
+    .section
+        padding: 0 calc(50% - 360px)
+
+@media (min-width: 1224px)
+    .section
+        padding: 0 calc(50% - 612px)
+
+@media (min-width: 1280px)
+    .section
+        padding: 0 calc(50% - 640px)
+
+// ---------- Общее выравнивание END ------------
+// ---------- Прижатие footer ----------
+.wapper
+    // height: 100vh
+    display: flex
+    flex-direction: column
+
+.content
+    flex-grow: 1
+// ---------- Прижатие footer END ----------
+
+.block-676
+    &__header
+        height: 56px
+        font-family: Open Sans
+        font-style: normal
+        font-weight: bold
+        font-size: 12px
+        line-height: 14px
+        display: flex
+        align-items: center
+        justify-content: center
+        letter-spacing: 0.5em
+        text-transform: uppercase
+        color: $head_color_light
+
+    &__rigth
+        padding-top: 56px
+        
+        &_no-padding
+            padding-top: 0
+
+        &_contacts
+            width: 100%
+
+        &_form
+            display: flex
+            justify-content: center
+            flex-direction: column
+            align-items: center
+            width: 100%
+            padding-bottom: 0
+
+    &__text
+        @extend %block-676_font
+        opacity: 90%
+        margin-top: 16px
+
+    &__bottom
+        height: 56px
+        display: flex
+        align-items: center
+        justify-content: center
+        @extend %sub_font
+
+.block-676-rev
+    color: $head_color_dark
+
+@media (min-width: 720px)
+    .block-676
+        display: flex
+        flex-direction: column
+        align-items: center
+
+        &__header
+            height: 100px
+        
+
+        &__rigth
+            padding-top: 56px
+            padding-bottom: 0
+
+        // &_form
+        //     padding-top: 100px
+
+        &__text
+            max-width: 720px
+
+@media (min-width: 1224px)
+    .block-676
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        // padding-bottom: 76px
+
+        &__left,
+        &__rigth
+            padding-right: 32px
+            padding-left: 32px
+
+        &__left
+            &_events-no-padding
+                padding-right: 0
+                padding-left: 0
+
+        &__rigth
+            &_events-no-padding
+                padding-right: 0
+                padding-left: 0
+
+    .block-676-contacts
+        flex-direction: column
+
+    .block-676-rev
+        flex-direction: row-reverse
+
+@media (max-width: 720px)
+    .hide-block
+        display: none
+
+.header
+    height: 800px
+    background-color: #e7fc9c
+    // background-image: url(./img/header-bg.jpg)
+.about
+    // padding-top: 100px
+
+@media (max-width: 720px)
+    .about
+        // padding-top: 24px
+
+.chef
+    background-image: url(../img/chef-bg.jpg)
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+
+.book
+    // padding-top: 100px
+
+@media (max-width: 720px)
+    .book
+        // padding-top: 24px
+
+.spec
+    background-image: url(../img/spec-bg.jpg)
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+
+.menu
+    // height: 920px
+    // padding-top: 76px
+    // padding-bottom: 76px
+
+.ev
+    background-image: url(../img/events-bg.jpg)
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+
+.photo
+    margin: 0 auto
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+
+@media (max-width: 720px)
+    .photo_hide
+        display: none
+    .photo__img
+        width: 100%
+
+.contacts
+    // height: 648px
+.map
+    height: 475px
+// ---------------- FOOTER -------------
+.footer
+    height: 100px
+    background-color: #000000
+    display: flex
+    justify-content: center
+    align-items: center
+    &__text
+        font-family: Open Sans
+        font-style: normal
+        font-weight: normal
+        font-size: 12px
+        line-height: 12px
+        color: #fff
