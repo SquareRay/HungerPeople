@@ -1,0 +1,132 @@
+*
+    margin: 0
+    padding: 0
+
+.header
+    height: 667px
+    background-image: url(../img/header-bg.jpg)
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+
+    &__title
+        display: flex
+        justify-content: space-between
+
+        &__date
+            // display: none
+            font-family: Open Sans
+            font-style: normal
+            font-weight: bold
+            font-size: 12px
+            line-height: 12px
+            color: $head_color_light
+            writing-mode: vertical-rl
+
+        &__left,
+        &__right
+            display: none
+            
+
+        &__social
+            width: 60px
+            height: 60px
+            border: 1px solid rgba(255, 255, 255, 0.2)
+            border-radius: 50%
+            display: flex
+            justify-content: center
+            align-items: center
+            margin-bottom: 24px
+
+.nav
+    display: flex
+    justify-content: space-around
+    align-items: center
+
+    &__left,
+    &__right
+        width: 100%
+        display: none
+        &__up,
+        &__down
+            height: 100px
+
+        &__up
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+
+    &__wheel
+        padding: 25px
+        display: none
+
+    &__ul
+        height: 100%
+        display: flex
+        justify-content: space-around
+
+        &__li
+            width: 25%
+            display: flex
+            justify-content: center
+            align-items: center
+
+    &__link
+        text-decoration: none
+        font-family: Open Sans
+        font-style: normal
+        font-weight: bold
+        font-size: 12px
+        line-height: 18px
+        text-transform: uppercase
+        color: $head_color_light
+
+    &__lines
+        width: 100%
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+        text-align: end
+
+@media (min-width: 720px)
+    .nav
+        &__left,
+        &__right
+            display: block
+
+        &__lines
+            display: none
+
+    .header
+        height: 800px
+
+        &__title
+            height: 596px
+
+@media (min-width: 1224px)
+    .nav
+        &__wheel
+            display: block
+
+    .header
+
+        &__title
+
+            &__left
+                display: flex
+                align-items: center
+                transform: rotate(180deg)
+
+            &__right
+                display: flex
+                flex-direction: column
+                justify-content: center
+
+            // &__date
+            //     display: block
+
+@media (min-width: 1280px)
+    .nav
+        padding-left: 80px
+        padding-right: 80px
+
+    .header
+        &__title
+            padding-left: 80px
+            padding-right: 80px

@@ -1,0 +1,37 @@
+
+.title-block
+    max-width: 320px
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    align-items: center
+    &__head
+        @extend %meal_font
+        font-size: 36px
+        line-height: 48px
+        text-transform: uppercase
+        text-align: center
+    &__underline
+        width: 60px
+        height: 5px
+        background: $beauty_color
+        border-radius: 50px
+        margin: 24px auto
+    &__text
+        font-family: Open Sans
+        font-style: normal
+        font-weight: bold
+        font-size: 18px
+        line-height: 28px
+        text-align: center
+        color: $head_color_dark
+
+        &_hide
+            display: none
+
+@media (min-width: 736px)
+    .title-block
+        width: 560px
+
+.light-color
+    color: $head_color_light
