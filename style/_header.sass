@@ -1,0 +1,280 @@
+*
+    margin: 0
+    padding: 0
+
+.header
+    height: 667px
+    background-image: url(../img/header-bg.jpg)
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+
+    &__title
+        height: 596px
+        display: flex
+        justify-content: center
+
+        &__date
+            // display: none
+            font-family: Open Sans
+            font-style: normal
+            font-weight: bold
+            font-size: 12px
+            line-height: 12px
+            color: $head_color_light
+            writing-mode: vertical-rl
+
+        &__left,
+        &__right
+            display: none
+
+        &__main
+            display: flex
+            flex-direction: column
+            align-items: center
+
+            &__rest
+                margin-top: 184px
+                font-family: Open Sans
+                font-style: normal
+                font-weight: bold
+                font-size: 12px
+                line-height: 14px
+                text-align: center
+                letter-spacing: 0.5em
+                text-transform: uppercase
+                color: $head_color_light
+
+            &__hunger
+                margin-top: 4px
+                font-family: Banny
+                font-style: normal
+                font-weight: 700
+                font-size: 40px
+                line-height: 48px
+                text-align: center
+                text-transform: uppercase
+                color: $head_color_light
+
+            &__line
+                margin-top: 46px
+                width: 60px
+                height: 6px
+                border-radius: 50px
+                background-color: $beauty_color
+
+            &__buttons
+                margin-top: 72px
+                display: flex
+                justify-content: space-between
+
+            &__btn
+                width: 100px
+                height: 40px
+                border-radius: 5px
+                border: 1px solid rgba(255, 255, 255, 0.5)
+
+                &__link
+                    width: 100%
+                    height: 100%
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    border-radius: 5px
+                    text-decoration: none
+                    font-family: Open Sans
+                    font-style: normal
+                    font-weight: bold
+                    font-size: 12px
+                    line-height: 20px
+                    color: $head_color_light
+                    text-transform: uppercase
+
+                &__link:hover
+                    background-color: $beauty_color
+
+            &__btn:hover
+                border: none
+
+            &__btn:first-child
+                margin-right: 8px
+            
+            &__date
+                margin-top: 48px
+                font-family: Open Sans
+                font-style: normal
+                font-weight: bold
+                font-size: 12px
+                line-height: 12px
+                color: $head_color_light
+
+            &__social
+                margin-top: 38px
+                display: flex
+                justify-content: center
+
+        &__social
+            width: 60px
+            height: 60px
+            border: 1px solid rgba(255, 255, 255, 0.2)
+            border-radius: 50%
+            display: flex
+            justify-content: center
+            align-items: center
+            margin: 12px
+
+        &__social:hover
+            background-color: rgba(255, 255, 255, 0.2)
+
+.nav
+    display: flex
+    justify-content: space-around
+    align-items: center
+
+    &__left,
+    &__right
+        width: 100%
+        display: none
+        &__up,
+        &__down
+            height: 100px
+
+        &__up
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+
+    &__wheel
+        padding: 25px
+        display: none
+
+    &__ul
+        height: 100%
+        display: flex
+        justify-content: space-around
+
+        &__li
+            width: 25%
+            display: flex
+            justify-content: center
+            align-items: center
+
+    &__link
+        text-decoration: none
+        font-family: Open Sans
+        font-style: normal
+        font-weight: bold
+        font-size: 12px
+        line-height: 18px
+        text-transform: uppercase
+        color: $head_color_light
+
+    &__lines
+        width: 100%
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+        text-align: end
+
+@media (min-width: 720px)
+    .nav
+        &__left,
+        &__right
+            display: block
+
+            &__down
+                display: none
+
+        &__lines
+            display: none
+
+    .header
+        height: 800px
+
+        &__title
+            height: 696px
+
+            &__main
+
+                &__rest
+                    margin-top: 224px
+
+                &__hunger
+                    margin-top: 24px
+                    font-size: 84px
+                    line-height: 90px
+
+                &__line
+                    margin-top: 32px
+                                    
+                &__buttons
+                    margin-top: 24px
+
+                &__date
+                    margin-top: 24px
+
+                &__social
+                    margin-top: 72px
+
+                
+
+                &__btn
+                    width: 200px
+                    height: 60px
+
+@media (min-width: 1224px)
+    .nav
+        &__wheel
+            display: block
+
+        &__left,
+        &__right
+            &__down
+                display: block
+
+    .header
+
+        &__title
+            height: 596px
+            justify-content: space-between
+
+            &__left
+                width: 60px
+                display: flex
+                align-items: center
+                justify-content: end
+                transform: rotate(180deg)
+
+            &__main
+
+                &__rest
+                    margin-top: 120px
+
+                &__hunger
+                    font-weight: bold
+                    font-size: 96px
+                    line-height: 96px
+
+                &__line
+                    margin-top: 40px
+
+                &__buttons
+                    margin-top: 32px
+
+                &__date,
+                &__social
+                    display: none
+
+            &__right
+                display: flex
+                flex-direction: column
+                justify-content: center
+
+            // &__date
+            //     display: block
+
+@media (min-width: 1280px)
+    .nav
+        padding-left: 80px
+        padding-right: 80px
+
+    .header
+        &__title
+            padding-left: 80px
+            padding-right: 80px

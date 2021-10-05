@@ -1,0 +1,104 @@
+$menu-cel-grid-big: 360px
+$menu-cel-grid-small: 320px
+$menu-grid-number-of-cel: 6
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    list-style-type: none
+
+// div
+//     border: 1px solid #000
+
+// h1, h2
+//     text-align: center
+//     border: 1px solid #000
+
+.section
+    padding: 0 16px
+
+@media (min-width: 736px)
+    .section
+        padding: 0 calc(50% - 368px)
+
+@media (min-width: 1112px)
+    .section
+        padding: 0 calc(50% - 556px)
+
+@media (min-width: 1280px)
+    .section
+        padding: 0 calc(50% - 640px)
+
+
+// -------- Меню header ---------------
+
+// В header стоит блок title-block, стили в файле _title-block
+.menu
+    padding-bottom: 64px
+
+.menu-header
+    padding-top: 24px
+    padding-bottom: 24px  
+
+.menu-nav
+    padding-bottom: 32px
+    
+// ---------- Меню - список блюд ------------
+.menu-list-wapper
+    display: flex
+    flex-direction: column
+    align-items: center
+
+.menu-screen-grid
+    width: 320px
+    height: 450px
+    overflow: hidden
+    position: relative
+
+@media (min-width: 736px)
+    .menu-screen-grid
+        width: 736px
+
+@media (min-width: 1112px)
+    .menu-screen-grid
+        width: 1112px
+
+.menu-line-grid
+    display: flex
+    width: 2240px
+    position: absolute
+    left: 0
+    transition: .5s
+
+.menu-cel-grid
+    width: $menu-cel-grid-big
+    height: 450px
+    
+
+@media (max-width: 735px)
+    .menu-cel-grid
+        width: $menu-cel-grid-small
+
+.menu-cel-grid:not(:last-child)
+    margin-right: 8px
+
+.menu-cel-grid:not(:first-child)
+    margin-left: 8px
+
+.menu-item
+    height: 64px
+    &__sub
+        @extend %sub_font
+
+.meal
+    display: flex
+    @extend %meal_font
+    text-transform: uppercase
+    &__type
+        width: 222px
+    &__dots
+        width: 48px
+        text-align: center
+    &__price
+        width: 90px
