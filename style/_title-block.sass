@@ -1,0 +1,55 @@
+.block-header
+    height: 56px
+    font-family: Open Sans
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
+    line-height: 14px
+    display: flex
+    align-items: center
+    justify-content: center
+    letter-spacing: 0.5em
+    text-transform: uppercase
+    color: $head_color_light
+
+.title-block
+    max-width: 320px
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    align-items: center
+    &__head
+        @extend %meal_font
+        font-size: 36px
+        line-height: 48px
+        text-transform: uppercase
+        text-align: center
+    &__underline
+        width: 60px
+        height: 5px
+        background: $beauty_color
+        border-radius: 50px
+        margin: 24px auto
+    &__text
+        font-family: Open Sans
+        font-style: normal
+        font-weight: bold
+        font-size: 18px
+        line-height: 28px
+        text-align: center
+        color: $head_color_dark
+
+        &_hide
+            display: none
+
+@media (min-width: 736px)
+    .block-header
+        height: 100px
+    .title-block
+        width: 560px
+
+
+        
+
+.light-color
+    color: $head_color_light

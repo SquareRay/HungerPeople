@@ -1,0 +1,121 @@
+@import hunger_fonts_add
+
+*
+    margin: 0
+    padding: 0
+
+.section
+    padding: 0 16px
+
+@media (min-width: 736px)
+    .section
+        padding: 0 calc(50% - 368px)
+
+@media (min-width: 1112px)
+    .section
+        padding: 0 calc(50% - 556px)
+
+@media (min-width: 1280px)
+    .section
+        padding: 0 calc(50% - 640px)
+
+.form
+    width: 100%
+    &__field
+        width: 100%
+        height: 60px
+        background: #E5E5E5
+        border-radius: 5px
+        border: none
+        margin-bottom: 12px
+        font-family: Open Sans
+        font-style: normal
+        font-weight: normal
+        font-size: 14px
+        line-height: 19px
+        text-indent: 20px
+        color: rgba(51, 51, 51, 0.5)
+
+    &__text
+        font-family: Open Sans
+        font-size: 12px
+        font-style: normal
+        font-weight: 700
+        line-height: 12px
+        letter-spacing: 0em
+        text-align: left
+        opacity: 50%
+
+    &__pic
+
+        width: 12px
+        color: #E8C300
+        font-style: normal
+        font-weight: 900
+        font-size: 12px
+        line-height: 12px
+
+    &__btn
+        width: 100%
+        height: 60px
+        border-radius: 5px
+        border: none
+        // margin-bottom: 12px
+        background-color: #E8C300
+        font-family: Open Sans
+        font-style: normal
+        font-weight: bold
+        font-size: 12px
+        line-height: 20px
+        display: flex
+        align-items: center
+        justify-content: center
+        color: #FFFFFF
+        text-transform: uppercase
+
+    &__address
+        display: flex
+        justify-content: space-between
+        align-items: center
+        flex-direction: column
+        margin-bottom: 12px
+
+    &_area
+        height: 200px
+        line-height: 100px
+
+@media (min-width: 720px)
+    .form
+        max-width: 720px
+        &__line
+            display: flex
+            &_revers
+                flex-direction: row-reverse
+
+        &__field
+            margin: 0 6px 12px 6px
+
+        &__btn
+            margin: 0 6px 0 6px
+
+        &__address
+            margin: 0 6px 12px 6px
+            // display: inline
+
+        &_contacts
+            &__address
+                width: 50%
+
+@media (min-width: 1224px)
+    .form
+
+        &_contacts
+            max-width: 1280px
+
+        &__line
+
+        &__address
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            align-items: center
