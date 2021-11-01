@@ -1,9 +1,9 @@
-@import title-block
+// @import title-block
 
-*
-    margin: 0
-    padding: 0
-    box-sizing: border-box
+// *
+//     margin: 0
+//     padding: 0
+//     box-sizing: border-box
 
 // div
 //     border: 1px solid #000
@@ -17,14 +17,14 @@
     .section
         padding: 0 calc(50% - 368px)
 
-@media (min-width: 1112px)
+@media (min-width: 1224px)
     .section
-        padding: 0 calc(50% - 556px)
+        padding: 0 calc(50% - 612px)
 
 @media (min-width: 1280px)
     .section
         padding: 0 calc(50% - 640px)
-    
+
 @media (min-width: 1440px)
     .section
         padding: 0 calc(50% - 720px)
@@ -38,15 +38,20 @@
 
 .content
     flex-grow: 1
+    position: relative
 // ---------- Прижатие footer END ----------
 .block-676
 
     &__rigth
-        padding-top: 56px
-        padding-bottom: 64px
+        &_dark
+            padding-top: 24px
+        // padding-bottom: 64px
 
         &_contacts
             width: 100%
+            display: flex
+            justify-content: center
+            padding-top: 64px
 
         &_form
             display: flex
@@ -58,16 +63,19 @@
 
     &__text
         @extend %block-676_font
-        opacity: 90%
+        opacity: 75%
         margin-top: 16px
+        // line-height: 14px
 
     &__bottom
-        height: 100px
+        // height: 100px
         display: flex
         align-items: center
         justify-content: center
         @extend %sub_font
-    
+
+        &__text
+            text-align: center
 
 .block-676-rev
     color: $head_color_dark
@@ -78,23 +86,32 @@
         flex-direction: column
         align-items: center
 
+        &__rigth
+            padding-top: 56px
+
         // &_form
         //     padding-top: 100px
 
         &__text
             max-width: 720px
 
+        &__bottom
+            height: 100px
+            
 @media (min-width: 1224px)
     .block-676
         flex-direction: row
         justify-content: space-between
         align-items: center
-        padding-bottom: 76px
+        // padding-bottom: 76px
 
         &__left,
         &__rigth
             padding-right: 32px
             padding-left: 32px
+
+        &__rigth
+            padding-top: 0
 
     .block-676-contacts
         flex-direction: column
@@ -109,12 +126,13 @@
 .header
     height: 800px
     // background-image: url(./img/header-bg.jpg)
-.about
-    padding-top: 100px
+// .about
+//     padding-top: 100px
 
 @media (max-width: 720px)
     .about
         padding-top: 24px
+        padding-bottom: 48px
 
 .chef
     background-image: url(../img/chef-bg.jpg)
@@ -122,12 +140,14 @@
     background-repeat: no-repeat
     background-size: cover
 
-.book
-    padding-top: 100px
+// .book
+//     padding-top: 100px
 
 @media (max-width: 720px)
     .book
-        padding-top: 24px
+        &__header
+            height: 24px
+        
 
 .spec
     background-image: url(../img/spec-bg.jpg)
@@ -137,14 +157,14 @@
 
 .menu
     // height: 920px
-    padding-top: 76px
-    padding-bottom: 76px
+    // padding-top: 76px
+    // padding-bottom: 76px
 
-.ev
-    background-image: url(../img/events-bg.jpg)
-    background-position: center
-    background-repeat: no-repeat
-    background-size: cover
+// .ev
+//     background-image: url(../img/events-bg.jpg)
+//     background-position: center
+//     background-repeat: no-repeat
+//     background-size: cover
 
 .photo
     margin: 0 auto
@@ -159,7 +179,7 @@
         width: 100%
 
 .contacts
-    height: 648px
+    // height: 648px
 .map
     height: 475px
 // ---------------- FOOTER -------------

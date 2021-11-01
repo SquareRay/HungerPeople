@@ -1,6 +1,6 @@
-*
-    margin: 0
-    padding: 0
+// *
+//     margin: 0
+//     padding: 0
 
 .header
     height: 667px
@@ -170,7 +170,36 @@
     &__lines
         width: 100%
         border-bottom: 1px solid rgba(255, 255, 255, 0.2)
-        text-align: end
+        display: flex
+        justify-content: end
+        &__btn
+            width: 52px
+
+.menu-shadow
+    width: 100vw
+    height: 100%
+    position: absolute
+    left: 0
+    top: 0
+    padding-top: 72px
+    background-color: rgba(49, 30, 30, 0.9)
+    text-align: center
+    display: none
+
+    &__li:not(last-child)
+        margin-bottom: 16px
+
+
+    &__link
+        font-family: Open Sans
+        font-style: normal
+        font-weight: bold
+        font-size: 12px
+        line-height: 18px
+        color: #FFFFFF
+        text-decoration: none
+        text-transform: uppercase
+
 
 @media (min-width: 720px)
     .nav

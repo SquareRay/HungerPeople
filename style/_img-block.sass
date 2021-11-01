@@ -50,41 +50,266 @@
         justify-content: center
         &__pic
             width: 100%
+            padding: 0 12px
         &__square
             display: none
             margin: 0
 
-.events
-    display: flex
-    background-color: #000000
 
-    &__img
+.square
+    width: 300px
+    height: 250px
+    border: 20px solid #E8C300
+    box-sizing: border-box
+    filter: drop-shadow(0px 0px 100px #000000)
+    border-radius: 5px
+    z-index: 1
+    display: none
+
+.events
+    background-image: url(../img/events-bg.jpg)
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+
+    &__wapper
         display: block
-        width: 83%
-    &__text
-        width: 17%
+        align-items: center
+        justify-content: space-between
+
+
+    &__header
+        height: 100px
+        // display: none
+
+    &__left
         display: flex
-        flex-direction: column
         justify-content: center
         align-items: center
-        &__p,
-        &__rev
-            font-family: Banny
-            font-size: 18px
-            line-height: 12px
+
+        &__header
+            height: 80px
+            font-family: Open Sans
+            font-style: normal
+            font-weight: bold
+            font-size: 12px
+            line-height: 14px
+            display: flex
+            align-items: center
+            justify-content: center
+            letter-spacing: 0.5em
             text-transform: uppercase
-            color: #FFFFFF
+            color: $head_color_light
 
-        &__p
-            transform: rotate(90deg)
+        &__box
+            width: 100%
+            height: 475px
+            background-color: #000000
+            display: flex
+            filter: drop-shadow(0px 0px 50px #000000)
+            border-radius: 5px
 
-        &__rev
-            transform: rotate(270deg)
+            &__img
+                width: 85%
+                background-image: url(../img/events-wed.jpg)
+                background-position: bottom
+                background-size: cover
+
+            &__pic
+                width: 100%
+
+            &__text
+                width: 15%
+
+            &__p
+                font-family: Banny
+                font-style: normal
+                font-weight: bold
+                font-size: 24px
+                line-height: 54px
+                text-indent: 20px
+                text-transform: uppercase
+                color: #FFFFFF
+                transform: rotate(90deg)
+
+    &__right
+        display: flex
+        justify-content: center
+        align-items: center
+
+        &__box
+            width: 100%
+            height: 475px
+            background-color: #000000
+            display: flex
+            filter: drop-shadow(0px 0px 50px #000000)
+            border-radius: 5px
+
+            &__img
+                width: 85%
+                background-image: url(../img/events-party.jpg)
+                background-position: bottom
+                background-size: cover
+
+            &__pic
+                width: 100%
+
+            &__text
+                width: 15%
+
+            &__p
+                height: 100%
+                writing-mode: vertical-rl
+                font-family: Banny
+                font-style: normal
+                font-weight: bold
+                font-size: 24px
+                line-height: 54px
+                text-indent: 20px
+                text-transform: uppercase
+                color: #FFFFFF
+                transform: rotate(180deg)
+
+    &__bottom
+        height: 100px
+        color: rgba(255, 255, 255, 0.5)
+        
+
+.events-light
+    padding-top: 48px
+
+    &_bottom
+        color: rgba(51, 51, 51, 0.5)
+        height: 56px
+
+.desk-show
+    display: none
+
+.mobile-show
+    display: block
 
 @media (min-width: 720px)
+    .square
+        display: block
+
     .events
-        &__text
-            &__p,
-            &__rev
-                font-size: 24px
-       
+
+        &__left
+            &__box
+                width: 570px
+
+            &__square
+                margin-right: -135px
+
+        &__right
+            &__box
+                width: 570px
+
+            &__square
+                margin-left: -135px
+
+    .events-light
+        &__square
+            display: block
+
+        &_bottom
+            height: 100px
+
+@media (min-width: 1224px)
+
+    .desk-show
+        display: flex
+
+    .mobile-show
+        display: none
+
+    .square
+        width: 250px
+
+    .events
+        &__wapper
+            display: flex
+
+        &__left
+            &__box
+                width: 475px
+
+            &__square
+                margin-right: -135px
+
+        &__right
+            &__box
+                width: 475px
+
+            &__square
+                margin-left: -135px
+
+
+.block-screen
+    width: 320px
+    height: 625px
+    margin: 0 auto
+    overflow: hidden
+    position: relative
+
+.block-slide
+    // width: 3144px
+    display: flex
+    position: absolute
+    left: 0
+    top: 0
+    transition: 0.5s
+
+.spec
+    &__bottom
+        height: 32px
+
+    &__dot
+        width: 10px
+        height: 10px
+        border-radius: 50%
+        background-color: rgba(255, 255, 255, 0.5)
+        cursor: pointer
+
+    &__dot:not(last-child)
+        margin-right: 24px
+
+.active-dot
+    background-color: #fff
+
+.block-box
+    width: 320px
+
+@media (min-width: 736px)
+    .block-screen
+        width: 736px
+        height: 888px
+
+    .block-box
+        width: 736px
+
+    .spec
+        &__bottom  
+            height: 100px
+
+@media (min-width: 1224px)
+    .block-screen
+        width: 1224px
+        height: 400px
+
+    .block-box
+        width: 1224px
+
+@media (min-width: 1280px)
+    .block-screen
+        width: 1280px
+
+    .block-box
+        width: 1280px
+
+@media (min-width: 1440px)
+    .block-screen
+        width: 1440px
+
+    .block-box
+        width: 1440px
